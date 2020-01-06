@@ -1,2 +1,0 @@
-# scrolling
-Created with CodeSandbox
