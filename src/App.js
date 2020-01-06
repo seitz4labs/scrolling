@@ -5,7 +5,7 @@ function cols(n) {
   let a = [];
   for (let c = 0; c < n; c++) {
     a.push({
-      width: "50px",
+      width: "100px",
       header: "Header " + c,
       content: (row, i) => (
         <span>
@@ -25,11 +25,26 @@ function rows(n) {
 }
 
 export default function App() {
-  const famogo = cols(5);
+  const famogo = cols(6);
 
-  const migs = rows(10);
+  const migs = rows(100);
   return (
     <div>
+      <div
+        id="Migrations"
+        className="caramel-section"
+        style={{ backgroundColor: "#efe" }}
+      >
+        This is my header
+        <div
+          id="Migrations"
+          className="caramel-section"
+          style={{ backgroundColor: "#dfd" }}
+        >
+          This is my sub header
+        </div>
+      </div>
+
       <div id="Migrations" className="caramel-section">
         <div
           className="caramel-scrollablex"
