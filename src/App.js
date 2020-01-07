@@ -29,30 +29,36 @@ export default function App() {
 
   const migs = rows(100);
   return (
-    <div>
+    <div className="caramel-section-col">
       <div
-        id="Migrations"
-        className="caramel-section"
+        id="Page-head"
+        className="caramel-section-col"
         style={{ backgroundColor: "#efe" }}
       >
         This is my header
         <div
-          id="Migrations"
-          className="caramel-section"
+          id="Page-subhead"
+          className="caramel-section-col"
           style={{ backgroundColor: "#dfd" }}
         >
           This is my sub header
         </div>
       </div>
 
-      <div id="Migrations" className="caramel-section">
+      <div id="Migrations" className="caramel-section-col">
         <div
-          className="caramel-scrollablex"
-          style={{ minWidth: "100vw", maxWidth: "100vw" }}
+          id="Mig scroll all x"
+          className="caramel-scrollable-x"
+          style={
+            {
+              /*minWidth: "100vw", maxWidth: "100vw"*/
+            }
+          }
         >
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div id="Mig Header row" className="caramel-section-row">
             {famogo.map(col => (
               <div
+                id="Mig Header row cell"
                 style={{
                   display: "flex",
                   minWidth: col.width,
@@ -64,7 +70,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="caramel-scrollabley">
+          {/*   <div className="caramel-scrollable-y">
             {migs.map((row, i) => (
               <div
                 key={row.runId}
@@ -84,7 +90,7 @@ export default function App() {
                 ))}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

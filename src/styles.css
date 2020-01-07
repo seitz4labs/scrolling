@@ -8,21 +8,30 @@
   right: 0;
 }
 
-.caramel-section {
+.caramel-section-col {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
   min-height: 0;
 }
 
-.caramel-scrollablex {
-  flex-grow: 1;
-  overflow-x: scroll;
+.caramel-section-row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  min-height: 0;
+}
+
+.caramel-scrollable-x {
+  display: flex;
+  flex-grow: 0;
+  overflow-x: scroll; /* may remove or go auto */
   min-width: 0;
 }
 
-.caramel-scrollabley {
-  flex-grow: 1;
+.caramel-scrollable-y {
+  display: flex;
+  flex-grow: 0;
   overflow-y: scroll;
   min-height: 0;
 }
