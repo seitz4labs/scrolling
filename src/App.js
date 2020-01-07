@@ -3,9 +3,12 @@ import "./styles.css";
 
 function cols(n) {
   let a = [];
+  let total = 0;
+  let width = 100;
   for (let c = 0; c < n; c++) {
+    total += width;
     a.push({
-      width: "100px",
+      width: "" + width + "px",
       header: "Header " + c,
       content: (row, i) => (
         <span>
@@ -14,7 +17,7 @@ function cols(n) {
       )
     });
   }
-  return a;
+  return [total, a];
 }
 function rows(n) {
   let a = [];
@@ -25,7 +28,7 @@ function rows(n) {
 }
 
 export default function App() {
-  const famogo = cols(6);
+  const [totalWidth, famogo] = cols(6);
 
   const migs = rows(100);
   return (
@@ -45,15 +48,20 @@ export default function App() {
         </div>
       </div>
 
-      <div id="Migrations" className="caramel-section-col">
+      <div
+        id="Migrations"
+        className="caramel-section-col"
+        style={{ minWidth: "100vw", maxWidth: "100vw" }}
+      >
         <div
           id="Mig scroll all x"
           className="caramel-scrollable-x"
-          style={
-            {
-              /*minWidth: "100vw", maxWidth: "100vw"*/
-            }
-          }
+          style={{
+            flexDirection: "column",
+            alignItems: "stretch",
+            minWidth: "" + totalWidth + "px",
+            maxWidth: totalWidth + "px"
+          }}
         >
           <div id="Mig Header row" className="caramel-section-row">
             {famogo.map(col => (
@@ -70,14 +78,23 @@ export default function App() {
               </div>
             ))}
           </div>
-          {/*   <div className="caramel-scrollable-y">
-            {migs.map((row, i) => (
+          <div
+            id="Mig Body"
+            className="caramel-scrollable-y"
+            style={{ width: "100%" }}
+          >
+            hello hello hello hello hello hello hello hello hello hello hello
+            hello hllll hello hello
+            {/* {migs.map((row, i) => (
               <div
+                className="caramel-section-row"
+                id="Mig Body row"
                 key={row.runId}
-                style={{ display: "flex", flexDirection: "row" }}
+                // style={{ display: "flex", flexDirection: "row" }}
               >
                 {famogo.map(col => (
                   <div
+                    className="caramel-section-col"
                     style={{
                       display: "flex",
                       minWidth: col.width,
@@ -89,8 +106,8 @@ export default function App() {
                   </div>
                 ))}
               </div>
-            ))}
-          </div> */}
+            ))} */}
+          </div>
         </div>
       </div>
     </div>

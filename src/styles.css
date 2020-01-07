@@ -31,9 +31,9 @@
 
 .caramel-scrollable-y {
   display: flex;
-  flex-grow: 0;
+  /* flex-grow: 0;
   overflow-y: scroll;
-  min-height: 0;
+  min-height: 0; */
 }
 
 th,
