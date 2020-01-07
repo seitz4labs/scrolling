@@ -32,46 +32,27 @@ export default function App() {
 
   const migs = rows(100);
   return (
-    <div className="caramel-section-col">
-      <div
-        id="Page-head"
-        className="caramel-section-col"
-        style={{ backgroundColor: "#efe" }}
-      >
+    <div className="page">
+      <div className="head">
         This is my header
-        <div
-          id="Page-subhead"
-          className="caramel-section-col"
-          style={{ backgroundColor: "#dfd" }}
-        >
-          This is my sub header
-        </div>
+        <div className="sub-head">This is my sub header</div>
       </div>
 
-      <div
-        id="Migrations"
-        className="caramel-section-col"
-        style={{ minWidth: "100vw", maxWidth: "100vw" }}
-      >
+      <div className="mig">
         <div
-          id="Mig scroll all x"
-          className="caramel-scrollable-x"
+          className="mig-table"
           style={{
-            flexDirection: "column",
-            alignItems: "stretch",
-            minWidth: "" + totalWidth + "px",
+            minWidth: totalWidth + "px",
             maxWidth: totalWidth + "px"
           }}
         >
-          <div id="Mig Header row" className="caramel-section-row">
+          <div className="mig-table-head">
             {famogo.map(col => (
               <div
-                id="Mig Header row cell"
+                className="mig-table-head-th"
                 style={{
-                  display: "flex",
                   minWidth: col.width,
-                  maxWidth: col.width,
-                  backgroundColor: "#fee"
+                  maxWidth: col.width
                 }}
               >
                 {col.header}
