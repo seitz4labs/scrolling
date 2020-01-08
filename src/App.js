@@ -41,15 +41,15 @@ export default function App() {
       <div className="mig">
         <div
           className="mig-table"
-          style={{
-            minWidth: totalWidth + "px",
-            maxWidth: totalWidth + "px"
-          }}
+          // style={{
+          //   minWidth: totalWidth + "px",
+          //   maxWidth: totalWidth + "px"
+          // }}
         >
           <div className="mig-table-head">
             {famogo.map(col => (
               <div
-                className="mig-table-head-th"
+                className="mig-table-head-col"
                 style={{
                   minWidth: col.width,
                   maxWidth: col.width
@@ -59,35 +59,22 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div
-            id="Mig Body"
-            className="caramel-scrollable-y"
-            style={{ width: "100%" }}
-          >
-            hello hello hello hello hello hello hello hello hello hello hello
-            hello hllll hello hello
-            {/* {migs.map((row, i) => (
-              <div
-                className="caramel-section-row"
-                id="Mig Body row"
-                key={row.runId}
-                // style={{ display: "flex", flexDirection: "row" }}
-              >
+          <div className="mig-table-body">
+            {migs.map((row, i) => (
+              <div className="mig-table-body-row" key={row.runId}>
                 {famogo.map(col => (
                   <div
-                    className="caramel-section-col"
+                    className="mig-table-body-row-col"
                     style={{
-                      display: "flex",
                       minWidth: col.width,
-                      maxWidth: col.width,
-                      backgroundColor: "#eef"
+                      maxWidth: col.width
                     }}
                   >
                     {col.content(row, i)}
                   </div>
                 ))}
               </div>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>

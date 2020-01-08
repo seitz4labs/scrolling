@@ -10,32 +10,51 @@
 
 .page {
   background-color: #080;
+  display: flex;
+  flex-direction: column;
 }
 
 .head {
-  background-color: #dfd;
+  display: flex;
+  flex-direction: column;
+  background-color: #efe;
 }
 
 .sub-head {
-  background-color: #dfd;
+  background-color: #ded;
 }
 
 .mig {
+  display: flex;
+  flex-direction: column;
   background-color: #800;
   padding: 3px;
 }
 
 .mig-table {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 .mig-table-head {
+  display: flex;
+  flex-direction: row;
 }
-.mig-table-head-th {
+.mig-table-head-col {
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .mig-table-body {
+  /* display: flex;
+  flex-direction: column; */
 }
 .mig-table-body-row {
+  display: flex;
+  flex-direction: row;
 }
-.mig-table-body-row-td {
+.mig-table-body-row-col {
+  /* display: flex;
+  flex-direction: column; */
 }
